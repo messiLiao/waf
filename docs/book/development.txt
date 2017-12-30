@@ -223,10 +223,10 @@ $ export WAFDIR=/path/to/directory/
 
 Though Waf is written in Python, additional restrictions apply to the source code:
 
-. Identation is tab-only, and the maximum line length should be about 200 characters
+. Indentation is tab-only, and the maximum line length should be about 200 characters
 . The development code is kept compatible with Python 2.6, and the code is processed so that it runs on Python 2.5
 . The _waflib_ modules must be insulated from the _Tools_ modules to keep the Waf core small and language independent
-. Api compatibility is maintained in the cycle of a minor version (from 1.8.0 to 1.8.n)
+. API compatibility is maintained in the cycle of a minor version (from 2.0.0 to 2.0.n)
 
 NOTE: More code always means more bugs. Whenever possible, unnecessary code must be removed, and the existing code base should be simplified.
 

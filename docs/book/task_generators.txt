@@ -8,7 +8,7 @@ The chapter on make-like rules illustrated how the attribute 'rule' is processed
 
 . Attributes should be processed only when the task generator is set to generate the tasks (lazy processing)
 . There is no list of authorized attributes (task generators may be extended by user scripts)
-. Attribute processing should be controlable on a task generator instance basis (special rules for particular task generators)
+. Attribute processing should be controllable on a task generator instance basis (special rules for particular task generators)
 . The extensions should be split into independent files (low coupling between the Waf tools)
 
 Implementing such a system is a difficult problem which lead to the creation of very different designs:
@@ -109,7 +109,7 @@ Waf: Leaving directory `/tmp/simpleproject/build'
 <1> The debugging zone 'task_gen' is used to display the task generator methods being executed
 <2> Display which task generator is being executed
 <3> The method 'process_rule' is used to process the 'rule'. It is always executed.
-<4> The method 'process_source' is used to process the 'source' attribute. It is always executed exept if the method 'process_rule' processes a 'rule' attribute
+<4> The method 'process_source' is used to process the 'source' attribute. It is always executed except if the method 'process_rule' processes a 'rule' attribute
 <5> Our task generator method is executed, and prints 'Hello, world!'
 <6> The task generator methods have been executed, the task generator is marked as done (posted)
 

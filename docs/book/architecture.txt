@@ -18,7 +18,7 @@ Waf consists of the following modules which constitute the core library. They ar
 |ConfigSet | Contains a dictionary class which supports a lightweight copy scheme and provides persistence services
 |Context   | Contains the base class for all waf commands (context parameters of the Waf commands)
 |Errors    | Exceptions used in the Waf code
-|Logs      | Loggging system wrapping the calls to the python logging module
+|Logs      | Logging system wrapping the calls to the python logging module
 |Node      | Contains the file system representation class
 |Options   | Provides a custom command-line option processing system based on optparse
 |Runner    | Contains the task execution system (thread-based producer-consumer)

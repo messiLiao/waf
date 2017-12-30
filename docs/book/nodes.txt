@@ -54,7 +54,7 @@ ctx.root parent   None <4>
 <3> Each node keeps reference to his _parent_ node
 <4> The root node has no _parent_
 
-NOTE: There is a strict correspondance between nodes and filesystem elements: a node represents exactly one file or one folder, and only one node can represent a file or a folder.
+NOTE: There is a strict correspondence between nodes and filesystem elements: a node represents exactly one file or one folder, and only one node can represent a file or a folder.
 
 ==== Node caching
 

@@ -7,7 +7,7 @@ We will now provide a detailed description of the build phase, which is used for
 ==== Build order and dependencies
 
 To illustrate the various concepts that are part of the build process, we are now going to use a new example.
-The files +foo.txt+ and +bar.txt+ will be created by copying the file +wscript+, and the file +foobar.txt+ will be created from the concatenation of the generated files. Here is a summary: footnote:[It is actually considered a best practice to avoid copying files. When this is required, consider installing files or re-using the examples provided under the folder `demos/subst` of the source ditribution.]
+The files +foo.txt+ and +bar.txt+ will be created by copying the file +wscript+, and the file +foobar.txt+ will be created from the concatenation of the generated files. Here is a summary: footnote:[It is actually considered a best practice to avoid copying files. When this is required, consider installing files or re-using the examples provided under the folder `demos/subst` of the source distribution.]
 
 [source,shishell]
 ---------------
@@ -286,7 +286,7 @@ def build(bld):
 <1> Install various files in the target destination
 <2> Install one file, changing its name
 <3> Create a symbolic link
-<4> Overridding the configuration set ('env' is optional in the three methods install_files, install_as and symlink_as)
+<4> Overriding the configuration set ('env' is optional in the three methods install_files, install_as and symlink_as)
 <5> Install src/bar/foo/a1.h as seen from the current script into '$\{PREFIX}/share/foo/a1.h'
 <6> Install the png files recursively, preserving the folder structure read from src/bar/
 

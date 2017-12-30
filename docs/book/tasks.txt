@@ -11,7 +11,7 @@ The build context is only used to create the tasks and to return lists of tasks 
 
 image::tasks_actors{PIC}["Actors processing the tasks"{backend@docbook:,width=250:},align="center"]
 
-// To reduce the build time, it is interesting to take advantage of the hardware (multiple cpu cores) or of the environment (distributed builds).
+// To reduce the build time, it is interesting to take advantage of the hardware (multiple CPU cores) or of the environment (distributed builds).
 The amount of consumers is determined from the number of processors, or may be set manually by using the '-j' option:
 
 [source,shishell]
@@ -231,7 +231,7 @@ For task graphs having mostly the same tree weight, a second priority level sort
 User scripts can be optimized to interrupt the build early in case of typical failures (syntax errors, unit tests, etc).
 In addition, execution of similar task types is evenly spread out.
 As a result, clusters of slow link tasks are less likely to occur at the end of full builds.
-This is helpful for preventing system memory overconsumption:
+This is helpful for preventing system memory over-consumption:
 
 image::weak_parallel{PIC}["Fifty shades of static libraries"{backend@docbook:,width=440:},align="center"]
 
