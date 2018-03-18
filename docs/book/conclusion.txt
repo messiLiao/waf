@@ -9,6 +9,6 @@ Due to the amount of features provided by Waf, this book cannot be both complete
 |https://waf.io/apidocs/index.html|API documentation
 |https://waf.io|The Waf project page and downloads
 |https://github.com/waf-project/waf|Source code repository and issue tracker
-|http://waf-devel.blogspot.com/2011/01/python-32-and-build-system-kit.html|Information on the build system kit
+|https://waf.io/blog/2011/01/python-32-and-build-system-kit.html|Information on the build system kit
 |================
 

@@ -80,5 +80,5 @@ include::scenarios_.txt[]
 include::development_.txt[]
 include::architecture_.txt[]
 include::conclusion_.txt[]
+include::variables_.txt[]
 include::glossary_.txt[]
-

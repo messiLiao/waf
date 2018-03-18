@@ -1,0 +1,25 @@
+
+== Appendices
+
+=== Environment variables
+
+[options="header",cols="1,3"]
+|=================
+|Environment variable name | Usage
+|DESTDIR               | Default installation base directory when '--destdir' is not provided on the command-line.
+|JOBS                  | Default value for the amount of parallel jobs. Has no effect when '-j' is provided on the command-line.
+|MSYSTEM               | When set to a non-empty value on Windows platforms, the msys root directory is used as root path.
+|NOCLIMB               | When set to a non-empty value, the process will not search for a build configuration in upper folders. This can be used to force automatic project configuration in sub-folders (Configure.autoconfig) in the context of nested projects.
+|NOCOLOR               | When set to a non-empty value, colors in console outputs are disabled. Has no effect when '--color' is provided on the command-line.
+|NOSYNC                | When set to a non-empty value, console outputs are displayed in an asynchronous manner; console text outputs may appear faster on some platforms.
+|NUMBER_OF_PROCESSORS  | Default value for the amount of parallel jobs when the JOBS environment variable is not provided; it is usually set on windows systems. Has no effect when '-j' is provided on the command-line.
+|PREFIX                | Default installation prefix when '--prefix' is not provided on the command-line.
+|TERM                  | When set to 'dumb' or 'emacs', console colors are disabled. May have no effect when '--color' is provided on the command-line.
+|WAF_CMD_FORMAT        | When set to 'string', commands executed by 'Context.exec_command' are also displayed as plain strings to facilitate copy-pasting.
+|WAFDIR                | Path to the directory containing 'waflib/'; the version in the waf file and in 'waflib/Context.py' must match else an error is raised.
+|WAF_HOUR_FORMAT       | Time format string, the default value is '%H:%M:%S'.
+|WAFLOCK               | Name of the lock file indicating whether a project is configured. Overriding this variable can be necessary when a project is shared over a network file system.
+|WAF_LOG_FORMAT        | Debug message format string, the default value is '%(asctime)s %(c1)s%(zone)s%(c2)s %(message)s'.
+|WAF_PRINT_FAILURE_LOG | When set to a non-empty value, failing configuration tests are printed to the console.
+|=================
+
