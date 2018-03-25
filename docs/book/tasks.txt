@@ -609,3 +609,37 @@ def build(ctx):
     )
 ---------------
 
+===== Deep inputs
+
+On incremental builds, only tasks that see their dependencies change are run.
+The contents of task inputs (Node objects) constitutes one such dependency.
+After a task is executed, task output changes (Node objects again) may then trigger
+other tasks in a cascade.
+
+This scheme minimizes rebuilds, and is usually considered a desirable feature.
+Dependencies onto other files are typically meant to be declared explicitly:
+
+. As outputs from a scanner method
+. As input Node objects, which can even be unused in a task command
+. As implicit Node dependencies in the list attribute `task.node_deps`
+
+These schemes require the list of dependencies must be specified explicitly so the can sometimes become a hassle.
+For example, in the case of C/C++ unit tests, test programs are meant to be re-run on upstream shared library changes,
+and tests can depend on a lot of input libraries.
+While this particular behaviour can obviously implemented by overriding the method `runnable_status` on a given task,
+a shortcut can simplify a lot of code.
+
+The decorator called `deep_inputs` enables tasks to re-run whenever the tasks associated to
+their inputs (Node objects in the lists `task.inputs` or `task.node_deps`) have changed,
+and even when the input files are identical:
+
+[source,python]
+---------------
+from waflib import Task
+@Task.deep_inputs
+class utest(Task.Task):
+        color = 'PINK'
+	def run(self):
+		...
+---------------
+
