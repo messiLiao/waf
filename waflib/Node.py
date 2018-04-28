@@ -384,7 +384,7 @@ class Node(object):
 		:rtype: :py:class:´waflib.Node.Node´
 		"""
 
-		if isinstance(lst, str):
+		if isinstance(lst, str) or isinstance(lst, unicode):
 			lst = [x for x in Utils.split_path(lst) if x and x != '.']
 
 		if lst and lst[0].startswith('\\\\') and not self.parent:
@@ -429,7 +429,7 @@ class Node(object):
 		:type lst: string or list of string
 		:rtype: :py:class:´waflib.Node.Node´
 		"""
-		if isinstance(lst, str):
+		if isinstance(lst, str) or isinstance(lst, unicode):
 			lst = [x for x in Utils.split_path(lst) if x and x != '.']
 
 		cur = self
@@ -457,7 +457,7 @@ class Node(object):
 		:type lst: string or list of string
 		:rtype: :py:class:´waflib.Node.Node´ or None if there is no entry in the Node datastructure
 		"""
-		if isinstance(lst, str):
+		if isinstance(lst, str) or isinstance(lst, unicode):
 			lst = [x for x in Utils.split_path(lst) if x and x != '.']
 
 		cur = self
@@ -819,7 +819,7 @@ class Node(object):
 		:returns: the corresponding Node object or None
 		:rtype: :py:class:`waflib.Node.Node`
 		"""
-		if isinstance(lst, str):
+		if isinstance(lst, str) or isinstance(lst, unicode):
 			lst = [x for x in Utils.split_path(lst) if x and x != '.']
 
 		node = self.get_bld().search_node(lst)
@@ -840,7 +840,7 @@ class Node(object):
 		:param lst: relative path
 		:type lst: string or list of string
 		"""
-		if isinstance(lst, str) and os.path.isabs(lst):
+		if (isinstance(lst, str) or isinstance(lst, unicode)) and os.path.isabs(lst):
 			node = self.ctx.root.make_node(lst)
 		else:
 			node = self.get_bld().make_node(lst)
@@ -856,7 +856,7 @@ class Node(object):
 		:returns: The corresponding Node object or None if there is no such folder
 		:rtype: :py:class:`waflib.Node.Node`
 		"""
-		if isinstance(lst, str):
+		if isinstance(lst, str) or isinstance(lst, unicode):
 			lst = [x for x in Utils.split_path(lst) if x and x != '.']
 
 		node = self.find_node(lst)
